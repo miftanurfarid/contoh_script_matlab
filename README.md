@@ -1,1 +1,2 @@
-# contoh_script_matlab
+# Catatan Script Matlab
+## Beberapa contoh script matlab yang pernah dibuat
