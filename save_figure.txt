@@ -1,0 +1,21 @@
+n = 1; % number of figure
+figure(n); n = n + 1;
+
+    subplot(211)
+    myspectrogram(TL, fs, [20 5], @hamming, nfft);
+    axis tight
+    title ('Target Left Ear Elevation 0^{o} Azimuth 0^{o}',...
+        'fontweight','bold','fontsize',12);
+    xlabel ('Time (second)','fontweight','bold','fontsize',12);
+    ylabel ('Frequency (Hz)','fontweight','bold','fontsize',12);
+    
+    subplot(212)    
+    myspectrogram(TR, fs, [20 5], @hamming, nfft);
+    title ('Target Right Ear Elevation 0^{o} Azimuth 0^{o}',...
+        'fontweight','bold','fontsize',12);
+    xlabel ('Time (second)','fontweight','bold','fontsize',12);
+    ylabel ('Frequency (Hz)','fontweight','bold','fontsize',12);
+    axis tight
+    
+    fig_target= sprintf('target_spektrogram_without_reverberation');
+    %saveas (gcf,fig_target,'eps2c'); % save figure as eps file
